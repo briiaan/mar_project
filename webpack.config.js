@@ -10,9 +10,12 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
+    resolve: {
+        extensions: ['.js', '.jsx'], // Add this line to resolve both .js and .jsx extensions
+    },
     plugins: [
-        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
+            template: './src/templates/index.template.html', // Specify the HTML template file
             filename: 'index.html',
             title: 'Mar | A Pretty Minimalist Budget Tracker',
             meta: {
@@ -29,7 +32,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.m?jsx?$/,
                 exclude: [/node_modules/, /server/],
                 use: {
                     loader: "babel-loader",
@@ -40,8 +43,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.html$/i, // Corrected regex pattern
-                loader: "html-loader", // Corrected loader name
+                test: /\.html$/i,
+                loader: "html-loader",
                 options: {
                     minimize: {
                         removeComments: false,
@@ -50,7 +53,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.s?css/i,
+                test: /\.s?css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "resolve-url-loader", "sass-loader"],
             }
         ]

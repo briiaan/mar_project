@@ -1,16 +1,16 @@
-import {
+const {
 	ReasonPhrases,
 	StatusCodes,
 	getReasonPhrase,
 	getStatusCode,
-} from 'http-status-codes';
+} = 'http-status-codes';
 
 const signUp = async (req, res) => {
-
+	res.send("TEST")
 }
 
 const login = async (req, res) => {
-
+	res.send("TEST")
 }
 
 module.exports = {
