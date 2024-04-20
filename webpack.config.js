@@ -20,7 +20,10 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            filename: 'about.html'
+            filename: 'dashboard.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'settings.html'
         })
     ],
     module: {
