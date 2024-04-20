@@ -1,0 +1,23 @@
+{
+    "presets": [
+      ["@babel/preset-env", {
+        // Specify target environments or other options if needed
+      }],
+      ["@babel/preset-typescript", {
+        "allowDeclareFields": true
+      }],
+      [
+        "@babel/preset-react",
+        {
+          "throwIfNamespace": false, // defaults to true
+          "runtime": "automatic" // defaults to classic
+        }
+      ],
+      ["@babel/preset-flow",
+      {
+      "all" : true
+      }
+      ]
+    ],
+    "plugins": ["babel-plugin-syntax-hermes-parser"]
+}
