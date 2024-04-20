@@ -27,7 +27,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'settings.html'
-        })
+        }),
+        new MiniCssExtractPlugin(), // Add MiniCssExtractPlugin instance
     ],
     module: {
         rules: [
@@ -54,7 +55,12 @@ module.exports = {
             },
             {
                 test: /\.s?css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "resolve-url-loader", "sass-loader"],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "resolve-url-loader",
+                    "sass-loader"
+                ],
             }
         ]
     }
