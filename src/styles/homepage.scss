@@ -1,2 +1,47 @@
-@use "variables" as v;
+@use "variables"  as v;
 @import url('../styles/default.scss');
+
+#container {
+    background-color: v.$branding_color;
+    #interactive-container {
+    #greeting-container {
+        #circle-statement {
+            #oval {
+                background-color: white;
+                p {
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    #company-slogan {
+        color:white;
+        font-weight: 500;
+        #slogan-container-grid {
+            #slogan_bold {
+                font-weight: 900;
+                font-size: 22px;
+            }
+        }
+    #buttons-container {
+        #login {
+            width: 100px;
+            height: 100px;
+            background-color: v.$button_color_1;
+            p {
+                color: white;
+            }
+        }
+        #signup {
+            width: 100px;
+            height: 100px;
+            background-color: v.$button_color_2;
+            p {
+                color: white;
+            }
+        }
+    }
+}
+}
+}

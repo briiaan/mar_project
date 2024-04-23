@@ -7,7 +7,8 @@ const path = require('path')
 const chalk = require('chalk')
 require('dotenv').config({path: path.resolve(__dirname, '..', '.env')});
 const auth = require('./routes/auth');
-const base = '/'
+const base = '/';
+
 /*  constants  */
 const app = express();
 const PORT = process.env.PORT;
@@ -21,7 +22,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'dist')))
 /* helmetjs configuration */
 app.disable('x-powered-by');
 app.get('/', (req,res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'dist', 'maisn.js'))
+    res.sendFile(path.resolve(__dirname, '..', 'dist', 'app.js'))
 })
 app.use('/', auth)
 

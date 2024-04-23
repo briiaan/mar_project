@@ -23,10 +23,12 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            filename: 'dashboard.html'
+            template: './src/templates/login.template.html',
+            filename: 'login.html'
         }),
         new HtmlWebpackPlugin({
-            filename: 'settings.html'
+            template: './src/templates/signup.template.html',
+            filename: 'signup.html'
         }),
         new MiniCssExtractPlugin(), // Add MiniCssExtractPlugin instance
     ],
