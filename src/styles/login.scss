@@ -1,0 +1,75 @@
+@use "variables"  as v;
+@import url('../styles/default.scss');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  #root {
+    height: 100svh;
+    display: grid;
+    place-content: center;
+  }
+  .container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #0056b3;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .logo {
+    text-align: center;
+  }
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+ 
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block; /* Display labels as block-level elements */
+    float: left; /* Float labels to the left */
+    width: 80px; /* Fixed width for labels */
+    margin-right: 10px; /* Add some space between label and input */
+  }
+  .form-group input {
+    width: 100%; /* Adjust width to fill remaining space */
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  
+  
+  .btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+  .signup-link button {
+    padding: 10px 20px;
+    background-color: v.$button_color_2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 30px;
+
+  }
+  

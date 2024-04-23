@@ -1,0 +1,111 @@
+@use "variables"  as v;
+
+@import url('../styles/default.scss');
+
+.sign-up-page {
+  background: v.$branding_color;
+  display: grid;
+  place-content: center;
+  height: 100svh;
+  width: 100svw;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.create-your-account {
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 26.7px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 29px;
+}
+
+input {
+  width: 100%;
+  height: 42px;
+  border-radius: 30px;
+  background: #FAFAFA;
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  color: #888888;
+}
+
+button {
+  width: 100%;
+  height: 42px;
+  border-radius: 35px;
+  background-color: #0085FF;
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.container-message {
+  padding: 20px 10px 10px 10px;
+}
+
+.container {
+  color: #888888;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  line-height: 3.116;
+}
+
+.container p {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.have-an-account {
+  text-align: center;
+  color: white;
+
+}
+
+.sign-in {
+  color: #FFFFFF;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.field-names {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.button_2 {
+  background-color: v.$button_color_2;
+}
+.terms-policy {
+  color: #ffffff;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 4.154;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}

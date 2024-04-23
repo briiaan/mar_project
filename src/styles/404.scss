@@ -1,0 +1,9 @@
+@use "variables"  as v;
+@import url('../styles/default.scss');
+
+#container {
+    background-color: v.$branding_color;
+    height: 100svh;
+    display: grid;
+    place-content: center;
+}
