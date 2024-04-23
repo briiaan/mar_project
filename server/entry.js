@@ -54,7 +54,7 @@ app.listen(PORT, function() {
     log(chalk.green.bold('-------------------------------------------'));
     log('\n')
 
-    log(chalk.blue("Application developed by: Brian"))
+    log(chalk.blue("Application developed by: Brian, Maryam, & Ellen"))
     log(chalk.blue("Application designed by: Maryam, and Ellen"))
     log(chalk.blue("Documentation maintained by Afnan"))
     log('\n')
