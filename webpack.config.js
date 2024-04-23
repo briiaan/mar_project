@@ -11,7 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js', '.jsx'], // Add this line to resolve both .js and .jsx extensions
+        extensions: ['.js', '.jsx', '.tsx', '.ts'], // Add this line to resolve both .js and .jsx extensions
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -33,7 +33,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.m?jsx?$/,
+                test: /\.m?[jt]sx?$/,
                 exclude: [/node_modules/, /server/],
                 use: {
                     loader: "babel-loader",
@@ -61,7 +61,18 @@ module.exports = {
                     "resolve-url-loader",
                     "sass-loader"
                 ],
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
+             {
+       
+               test: /\.(woff|woff2|eot|ttf|otf)$/i,
+       
+               type: 'asset/resource',
+       
+             }
         ]
     }
 };

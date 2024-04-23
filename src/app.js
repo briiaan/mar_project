@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header';
+import Homepage from './components/Homepage';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Homepage/>
+    }
+])
 
 const App = () => {
     return (
     <>
-    <Header/>
-    <h1>Say hello to Mar</h1>
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
     </>
     )
 }

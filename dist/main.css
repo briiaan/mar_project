@@ -1,10 +1,16 @@
-/*!************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/header.scss ***!
-  \************************************************************************************************************************************************************/
-#navigation-bar {
-  background-color: aqua;
-  height: 100px;
-  width: 100px;
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/default.scss ***!
+  \***************************************************************************/
+@import url(https://fonts.bunny.net/css?family=poppins:200,300,400,500,600,700,800,900);
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles/default.scss (1) ***!
+  \*******************************************************************************/
+* {
+    font-family: 'poppins';
 }
+/*!**************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/homepage.scss ***!
+  \**************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtFQUNBO0VBQ0E7QUFDSixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbWFyX3Byb2plY3QvLi9zcmMvc3R5bGVzL2hlYWRlci5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIiNuYXZpZ2F0aW9uLWJhciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYXF1YTtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiAxMDBweDtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUVBO0lBQ0ksc0JBQXNCO0FBQzFCLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9tYXJfcHJvamVjdC8uL3NyYy9zdHlsZXMvZGVmYXVsdC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKGh0dHBzOi8vZm9udHMuYnVubnkubmV0L2Nzcz9mYW1pbHk9cG9wcGluczoyMDAsMzAwLDQwMCw1MDAsNjAwLDcwMCw4MDAsOTAwKTtcblxuKiB7XG4gICAgZm9udC1mYW1pbHk6ICdwb3BwaW5zJztcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/
