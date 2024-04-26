@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, Form } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 import "../styles/signup.scss"
 
@@ -55,7 +56,9 @@ export default function Signup() {
                 <div class="container-message">
                 <div class="have-an-account">Have an account? </div>
                 </div>
+                <Link to="/login">
                 <button type="submit" className="button_2">LOGIN</button>
+                </Link>
 
                 </Form>
                 <p class="terms-policy">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>

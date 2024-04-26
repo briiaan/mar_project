@@ -3,10 +3,12 @@ const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const compression = require("compression");
 const connect = require("connect");
-const path = require('path')
-const chalk = require('chalk')
-const User = require('./db/models/User')
-const crypto = require('crypto')
+const path = require('path');
+const chalk = require('chalk');
+const User = require('./db/models/User');
+const ip = require('ip');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 let mongoose = require('mongoose')
 const connectDb = require('./db/connect')
 require('dotenv').config({path: path.resolve(__dirname, '..', '.env')});
@@ -34,10 +36,10 @@ app.post('/signup', async (req,res) => {
         const user = new User({
             name: req.body.name,
             email: req.body.email,
-            password: crypto.createHash('sha256').update(req.body.password).digest('hex')
-        })
+            password: bcrypt.hashSync(req.body.password, saltRounds)
+         })
         await user.save();
-        console.log('User saved', user);
+        console.log('User saved', user);        
     } catch(err) {
         console.log(err);
 
@@ -58,6 +60,8 @@ app.listen(PORT, function() {
     log(chalk.blue("Application designed by: Maryam, and Ellen"))
     log(chalk.blue("Documentation maintained by Afnan"))
     log('\n')
-    log(chalk.blue.bold('Server is live and running on port ') + chalk.yellow.bold(PORT));})
+    log(chalk.blue.bold('Server is live and running on ip http://') + ip.address() + ':' + chalk.yellow.bold(PORT))
     log('\n')
+})
+
 

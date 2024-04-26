@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import logo from "../images/mar_logo.png"
+import { Link } from "react-router-dom";
 import "../styles/login.scss";
 
 export default function Login() {
@@ -28,7 +29,9 @@ export default function Login() {
         </form>
             <div class="signup-link">
             <p>Don't have an account?</p>
+            <Link to="/signup">
         <button type="button" class="signup-btn">Sign Up</button>
+        </Link>
             </div>
             </div>
         </div>
